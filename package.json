@@ -1,0 +1,13 @@
+{
+  "name": "my-sphero",
+  "version": "0.0.1",
+  "description": "A Cylon-based implementation for a Sphero 2.0",
+  "author": {
+    "name": "Eric Internicola",
+    "email": "intere@gmail.com"
+  },
+  "dependencies": {
+    "cylon": "~0.9.2",
+    "cylon-sphero": ""
+  }
+}
