@@ -1,15 +1,13 @@
 var Cylon = require('cylon');
 
-var DEVICE_PORT = '/dev/cu.Sphero-PBG-AMP-SPP';
-//var DEVICE_PORT = '/dev/rfcomm0';
+var config = require('./config');
 
 Cylon.robot({
   // connection: { name: 'sphero', adaptor: 'sphero', port: '/dev/cu.Sphero-PGR-AMP-SPP' },
-  connection: { name: 'sphero', adaptor: 'sphero', port: DEVICE_PORT },
+  connection: { name: 'sphero', adaptor: 'sphero', port: config.DEVICE_PORT },
   device: { name: 'sphero', driver: 'sphero' },
 
   work: function(my) {
-
 
     var amount = 30;
     var direction = 120;
