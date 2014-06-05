@@ -1,6 +1,7 @@
 var Cylon = require('cylon');
 
-var DEVICE_PORT = '/dev/cu.Sphero-ROR-AMP-SPP';
+var DEVICE_PORT = '/dev/cu.Sphero-PBG-AMP-SPP';
+//var DEVICE_PORT = '/dev/rfcomm0';
 
 Cylon.robot({
   // connection: { name: 'sphero', adaptor: 'sphero', port: '/dev/cu.Sphero-PGR-AMP-SPP' },
@@ -12,7 +13,7 @@ Cylon.robot({
 
     var amount = 30;
     var direction = 120;
-    var speed = 60;
+    var speed = 100;
     var backup = false;
     var backupCount = 0;
 
@@ -45,11 +46,9 @@ Cylon.robot({
         // }
 
         direction = (direction + increment) % 360;
-      } 
+      }
 
     });
 
   }
 }).start();
-
-
