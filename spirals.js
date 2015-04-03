@@ -9,7 +9,7 @@ var Cylon = require('cylon');
 var config = require('./config');
 console.log('Device Port: ' + config.DEVICE_PORT);
 
-var MAX_SPEED = 255;      // I wanna go fast!
+var SPEED = 100;      // I wanna go fast!
 var direction = 90;
 var speed = 30;
 var forward = true;
@@ -40,7 +40,7 @@ Cylon.robot({
     every((0.3).second(), function() {
 
       me.sphero.setRandomColor();
-      me.sphero.roll(MAX_SPEED,direction);
+      me.sphero.roll(SPEED,direction);
 
       if(forward) {
         direction = Math.abs((direction + 45) % 360);
